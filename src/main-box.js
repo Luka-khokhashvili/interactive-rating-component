@@ -40,7 +40,11 @@ function ScoresSection() {
 }
 
 function SubmitButton() {
-  return <button className="submit-button">SUBMIT</button>;
+  return (
+    <a href="#" className="submit-button">
+      SUBMIT
+    </a>
+  );
 }
 
 export default MainBox;
