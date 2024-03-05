@@ -3,8 +3,10 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 26.612%;
-  padding: 2%;
+  width: 28.61111111111111%;
+  aspect-ratio: 0.99035;
+  box-sizing: border-box;
+  padding: 2.223%;
   border-radius: 30px;
   background-image: radial-gradient(
     at top,
@@ -16,25 +18,64 @@
 .titles-body {
   display: flex;
   flex-direction: column;
+  gap: 20%;
 }
 
 .star-body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 12.53%;
-  height: 3rem;
+  width: 13.797%;
+  aspect-ratio: 1;
+  margin-bottom: 5%;
   border-radius: 50%;
   background-color: hsl(213, 19%, 18%);
 }
 
 .main-title {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.944vw;
+  font-weight: 700;
+  margin: 4.4% 0;
+}
+
+.paragraph {
+  color: hsl(217, 12%, 63%);
+  font-size: 1.042vw;
+  font-weight: 300;
+  line-height: 1.5em;
+  margin: 0;
 }
 
 .scores-section {
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding: 6% 0 9% 0;
+}
+
+.submit-button {
+  box-sizing: border-box;
+  align-content: center;
+  text-align: center;
+  width: 100%;
+  padding: 4% 0;
+  background-color: hsl(25, 97%, 53%);
+  border: none;
+  border-radius: 22.5px;
+
+  color: hsl(0, 0%, 100%);
+  font-size: 1.042vw;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  transition: all 300ms linear;
+}
+
+.submit-button:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
 }

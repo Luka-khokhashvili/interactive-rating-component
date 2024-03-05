@@ -2,9 +2,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 13.31%;
-  height: 3.188rem;
+  width: 14.659%;
+  aspect-ratio: 1;
+  border: none;
   border-radius: 50%;
   background-color: hsl(213, 19%, 18%);
+
   color: hsl(216, 12%, 54%);
+  font-size: 1.111vw;
+  font-weight: 700;
+  line-height: 1.4em;
+
+  transition: all 300ms linear;
+}
+
+.score-body:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+}
+
+.score-body:active {
+  background-color: hsl(216, 12%, 54%);
+  color: hsl(0, 0%, 100%);
 }

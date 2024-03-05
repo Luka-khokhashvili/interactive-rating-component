@@ -1,7 +1,7 @@
 import "./ScoreCircle.css";
 
 function ScoreCircle(props) {
-  return <h4 className="score-body">{props.number}</h4>;
+  return <button className="score-body">{props.number}</button>;
 }
 
 export default ScoreCircle;
