@@ -1,0 +1,13 @@
+* {
+  font-family: 'overpass', sans-serif;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(216, 12%, 8%);
+}
+

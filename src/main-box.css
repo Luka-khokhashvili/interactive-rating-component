@@ -1,0 +1,40 @@
+.main-box-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 26.612%;
+  padding: 2%;
+  border-radius: 30px;
+  background-image: radial-gradient(
+    at top,
+    hsl(215, 20%, 17%),
+    hsl(215, 24%, 12%)
+  );
+}
+
+.titles-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.star-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12.53%;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: hsl(213, 19%, 18%);
+}
+
+.main-title {
+}
+
+.scores-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
