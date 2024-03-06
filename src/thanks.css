@@ -1,0 +1,25 @@
+.Thanks-body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+
+.Thanks-body img {
+  width: 50%;
+}
+
+.score-display-body {
+  padding: 2% 8%;
+  background-color: hsl(213, 19%, 18%);
+  color: hsl(25, 97%, 53%);
+  border-radius: 22.5px;
+}
+
+.thank-text-body {
+  text-align: center;
+  width: 98%;
+}
