@@ -1,6 +1,5 @@
-import './App.css';
-import MainBox from './main-box';
-
+import "./App.css";
+import MainBox from "./main-box";
 
 function App() {
   return (

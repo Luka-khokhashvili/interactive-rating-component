@@ -1,6 +1,7 @@
 import "./thanks.css";
 import ThankYouImage from "./images/illustration-thank-you.svg";
 
+// main container
 function ThanksPage({ score }) {
   return (
     <div className="Thanks-body">
@@ -11,6 +12,7 @@ function ThanksPage({ score }) {
   );
 }
 
+// section to display selected score
 function ScoreDisplay(props) {
   return (
     <div className="score-display-body">
@@ -19,6 +21,7 @@ function ScoreDisplay(props) {
   );
 }
 
+// component for texts
 function ThankYouText() {
   return (
     <div className="thank-text-body">

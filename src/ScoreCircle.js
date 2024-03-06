@@ -2,6 +2,7 @@
 import React from "react";
 import "./ScoreCircle.css";
 
+// component for scores
 function ScoreCircle({ number, onClick, selected }) {
   const handleClick = () => {
     onClick(number);

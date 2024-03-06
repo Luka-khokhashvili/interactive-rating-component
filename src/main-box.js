@@ -5,6 +5,7 @@ import starIcon from "./images/icon-star.svg";
 import ScoreCircle from "./ScoreCircle";
 import ThanksPage from "./thanks";
 
+// Main container
 function MainBox() {
   const [submitted, setSubmitted] = useState(false);
   const [selectedScore, setSelectedScore] = useState(0); // State to track the selected score
@@ -20,13 +21,13 @@ function MainBox() {
   return (
     <div className="main-box-body">
       {submitted ? (
-        <ThanksPage score={selectedScore} /> // Pass the selected score to the ThanksPage component
+        <ThanksPage score={selectedScore} />
       ) : (
         <>
           <Titles />
           <ScoresSection
             onScoreSelect={handleScoreSelection}
-            selectedScore={selectedScore} // Pass the selected score to the ScoresSection component
+            selectedScore={selectedScore}
           />
           <SubmitButton onClick={handleSubmit} />
         </>
@@ -35,6 +36,7 @@ function MainBox() {
   );
 }
 
+// component for titles section
 function Titles() {
   return (
     <div className="titles-body">
@@ -50,6 +52,7 @@ function Titles() {
   );
 }
 
+// component for scores section
 function ScoresSection({ onScoreSelect, selectedScore }) {
   const handleScoreClick = (score) => {
     onScoreSelect(score); // Call the onScoreSelect callback with the selected score
@@ -86,6 +89,7 @@ function ScoresSection({ onScoreSelect, selectedScore }) {
   );
 }
 
+// submit button component
 function SubmitButton({ onClick }) {
   return (
     <button className="submit-button" onClick={onClick}>
