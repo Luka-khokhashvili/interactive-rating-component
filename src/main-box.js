@@ -1,13 +1,29 @@
+import React, { useState } from "react";
 import "./main-box.css";
 import starIcon from "./images/icon-star.svg";
 import ScoreCircle from "./ScoreCircle";
+import ThanksPage from "./thanks"; // Importing ThanksPage component
 
 function MainBox() {
+  const [submitted, setSubmitted] = useState(false); // State to track if the form is submitted
+
+  const handleSubmit = () => {
+    // Handle form submission
+    // For now, just setting the state to true to simulate submission
+    setSubmitted(true);
+  };
+
   return (
     <div className="main-box-body">
-      <Titles />
-      <ScoresSection />
-      <SubmitButton />
+      {submitted ? (
+        <ThanksPage /> // Render ThanksPage if form is submitted
+      ) : (
+        <>
+          <Titles />
+          <ScoresSection />
+          <SubmitButton onClick={handleSubmit} />
+        </>
+      )}
     </div>
   );
 }
@@ -39,11 +55,11 @@ function ScoresSection() {
   );
 }
 
-function SubmitButton() {
+function SubmitButton({ onClick }) {
   return (
-    <a href="#" className="submit-button">
+    <button className="submit-button" onClick={onClick}>
       SUBMIT
-    </a>
+    </button>
   );
 }
 

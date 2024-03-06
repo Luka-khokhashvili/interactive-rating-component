@@ -32,16 +32,20 @@
   background-color: hsl(213, 19%, 18%);
 }
 
+.star-icon {
+  width: 35%;
+}
+
 .main-title {
   color: hsl(0, 0%, 100%);
-  font-size: 1.944vw;
+  font-size: clamp(24px, 1.944vw, 38px);
   font-weight: 700;
   margin: 4.4% 0;
 }
 
 .paragraph {
   color: hsl(217, 12%, 63%);
-  font-size: 1.042vw;
+  font-size: clamp(15px, 1.042vw, 20px);
   font-weight: 300;
   line-height: 1.5em;
   margin: 0;
@@ -69,7 +73,7 @@
   cursor: pointer;
 
   color: hsl(0, 0%, 100%);
-  font-size: 1.042vw;
+  font-size: clamp(15px, 1.042vw, 20px);
   text-decoration: none;
   font-weight: 700;
   letter-spacing: 2px;
@@ -80,4 +84,38 @@
 .submit-button:hover {
   background-color: hsl(0, 0%, 100%);
   color: hsl(25, 97%, 53%);
+}
+
+@media screen and (max-width: 375px) {
+  .main-box-body {
+    width: 92%;
+    padding: 5%;
+    border-radius: 15px;
+  }
+
+  .star-body {
+    margin-bottom: 2%;
+  }
+
+  .submit-button {
+    letter-spacing: 1.87px;
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .main-box-body {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .main-box-body {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .main-box-body {
+    width: 40%;
+  }
 }

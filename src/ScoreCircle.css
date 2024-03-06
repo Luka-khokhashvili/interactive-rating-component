@@ -10,7 +10,7 @@
   cursor: pointer;
 
   color: hsl(216, 12%, 54%);
-  font-size: 1.111vw;
+  font-size: clamp(15px, 1.111vw, 21px);
   font-weight: 700;
   line-height: 1.4em;
 
