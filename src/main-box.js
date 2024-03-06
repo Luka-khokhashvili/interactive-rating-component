@@ -1,26 +1,33 @@
+// MainBox.js
 import React, { useState } from "react";
 import "./main-box.css";
 import starIcon from "./images/icon-star.svg";
 import ScoreCircle from "./ScoreCircle";
-import ThanksPage from "./thanks"; // Importing ThanksPage component
+import ThanksPage from "./thanks";
 
 function MainBox() {
-  const [submitted, setSubmitted] = useState(false); // State to track if the form is submitted
+  const [submitted, setSubmitted] = useState(false);
+  const [selectedScore, setSelectedScore] = useState(0); // State to track the selected score
 
   const handleSubmit = () => {
-    // Handle form submission
-    // For now, just setting the state to true to simulate submission
     setSubmitted(true);
+  };
+
+  const handleScoreSelection = (score) => {
+    setSelectedScore(score); // Update the selected score when a score circle is clicked
   };
 
   return (
     <div className="main-box-body">
       {submitted ? (
-        <ThanksPage /> // Render ThanksPage if form is submitted
+        <ThanksPage score={selectedScore} /> // Pass the selected score to the ThanksPage component
       ) : (
         <>
           <Titles />
-          <ScoresSection />
+          <ScoresSection
+            onScoreSelect={handleScoreSelection}
+            selectedScore={selectedScore} // Pass the selected score to the ScoresSection component
+          />
           <SubmitButton onClick={handleSubmit} />
         </>
       )}
@@ -43,14 +50,38 @@ function Titles() {
   );
 }
 
-function ScoresSection() {
+function ScoresSection({ onScoreSelect, selectedScore }) {
+  const handleScoreClick = (score) => {
+    onScoreSelect(score); // Call the onScoreSelect callback with the selected score
+  };
+
   return (
     <div className="scores-section">
-      <ScoreCircle number="1" />
-      <ScoreCircle number="2" />
-      <ScoreCircle number="3" />
-      <ScoreCircle number="4" />
-      <ScoreCircle number="5" />
+      <ScoreCircle
+        number="1"
+        onClick={() => handleScoreClick(1)}
+        selected={selectedScore === 1} // Check if this score is selected
+      />
+      <ScoreCircle
+        number="2"
+        onClick={() => handleScoreClick(2)}
+        selected={selectedScore === 2}
+      />
+      <ScoreCircle
+        number="3"
+        onClick={() => handleScoreClick(3)}
+        selected={selectedScore === 3}
+      />
+      <ScoreCircle
+        number="4"
+        onClick={() => handleScoreClick(4)}
+        selected={selectedScore === 4}
+      />
+      <ScoreCircle
+        number="5"
+        onClick={() => handleScoreClick(5)}
+        selected={selectedScore === 5}
+      />
     </div>
   );
 }

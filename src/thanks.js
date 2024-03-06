@@ -1,11 +1,11 @@
 import "./thanks.css";
 import ThankYouImage from "./images/illustration-thank-you.svg";
 
-function ThanksPage() {
+function ThanksPage({ score }) {
   return (
     <div className="Thanks-body">
       <img src={ThankYouImage} alt="Thank you ilustration" />
-      <ScoreDisplay />
+      <ScoreDisplay score={score} />
       <ThankYouText />
     </div>
   );
